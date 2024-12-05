@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Olympic Gamble: Weighing the Economic Risks and Rewards of Hosting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#economic-impact">Economic Impact</a></li>
+                <li><a href="#social-impact">Social Impact</a></li>
+                <li><a href="#environmental-impact">Environmental Impact</a></li>
+                <li><a href="#governance-impact">Political & Governance</a></li>
+                <li><a href="#final-thoughts">Final Thoughts</a></li>
+                <li><a href="#citations">Citations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="images/olympic-stadium.jpg" alt="Olympic Stadium" class="hero-image">
+            <div class="intro-text">
+                <h1>The Olympic Gamble</h1>
+                <p>Exploring the economic, social, and environmental risks and rewards of hosting the Olympic Games.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="economic-impact" class="section" data-aos="fade-up">
+        <h2>Economic Impacts of Hosting the Olympics</h2>
+        <p>This section explores the short-term benefits, such as tourism and job creation during the Games, and whether these benefits lead to long-term economic growth or debt. Case studies include cities like Barcelona (success) and Rio de Janeiro (struggles with debt).</p>
+        <canvas id="economicChart" width="400" height="200"></canvas>
+    </section>
+
+    <section id="social-impact" class="section" data-aos="fade-up">
+        <h2>Social Effects: Gentrification and Displacement</h2>
+        <p>This section looks at the social impacts, including gentrification, displacement of low-income residents, and changes in local business dynamics.</p>
+    </section>
+
+    <section id="environmental-impact" class="section" data-aos="fade-up">
+        <h2>Environmental Costs: Balancing Green Promises</h2>
+        <p>Learn about the environmental challenges of hosting the Olympics, from pollution to the sustainability of infrastructure development.</p>
+    </section>
+
+    <section id="governance-impact" class="section" data-aos="fade-up">
+        <h2>Political and Governance Challenges</h2>
+        <p>This section addresses issues like mismanagement, corruption, and the pressures placed on host cities by the International Olympic Committee (IOC).</p>
+    </section>
+
+    <section id="final-thoughts" class="section" data-aos="fade-up">
+        <h2>Final Thoughts</h2>
+        <p>Do the long-term impacts of hosting the Olympics outweigh the short-term benefits? This section offers a conclusion based on the research presented.</p>
+    </section>
+
+    <section id="citations" class="section">
+        <h2>Citations</h2>
+        <ul>
+            <li>Bradshaw, Nathan. "The Olympic Gamble: Weighing the Economic Risks and Rewards of Hosting." *Personal Paper*, 2024.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nathan Bradshaw. All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init(); // Initializes AOS animations
+
+        // Create an Economic Chart
+        var ctx = document.getElementById('economicChart').getContext('2d');
+        var economicChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Barcelona', 'Rio de Janeiro', 'Athens', 'London'],
+                datasets: [{
+                    label: 'Economic Impact ($ Billion)',
+                    data: [5, -1.2, -2.5, 3], // Sample data
+                    backgroundColor: ['green', 'red', 'orange', 'blue'],
+                    borderColor: ['green', 'red', 'orange', 'blue'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
